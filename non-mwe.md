@@ -136,34 +136,7 @@ Do not split them unless the internal verbal elements clearly function as separa
 
 ### Important Note 2:  on V + V Light-Verb-like Constructions
 
-Some **V + V** constructions may also show light-verb-like behaviour, especially when the second verb has a weakened or bleached lexical meaning.
-
-For example:
-
-```text
-அவன் கதவை     மூடிவைத்தான்
-அவன் கதவை     மூடி          வைத்தான்
-he   door-ACC  close-VRP   keep-PST-3SG.M
-He kept the door closed.
-```
-
-Here, **வை** normally means “keep” or “place”. However, in this construction, it contributes a resultative meaning: the result of closing continues to hold, and both of these verbs together license arguments. Therefore, this may be described as a **V + V light-verb-like construction**.
-
-```text
-அவன் புத்தகத்தை எடுத்துகொண்டான்.
-அவன்    புத்தகத்தை      எடுத்து        கொண்டான்
-he      book-ACC      take-VRP    hold-PST-3SG.M
-He took the book (for himself).
-```
-
-Here, **கொள்** adds a reflexive or self-benefactive meaning. It has a weakened lexical meaning and supports the main verb **எடுத்து**.
-The final analysis depends on the syntactic behaviour of the construction and the meaning contributed by the second verb.
-
-The general principle is:
-
-```text
-V + V constructions with a bleached second verb and monoclausal in nature may be light-verb-like, but they should not be labelled mechanically. The context should determine whether the relation is auxiliary-like, serial-verb-like, or light-verb-like. Because, the same verb may function as a lexical verb, auxiliary, serial verb component, or light-verb-like element depending on the sentence context.
-```
+When there is a V+V construction it also should be checked for V+V light verb. If it is a V + V light verb, then it should be tokenised.
 
 
 ## 4.0 Lexicalised N+N compounds
