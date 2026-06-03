@@ -75,6 +75,10 @@ The people who are coming are students.
 
 Participial nouns such as **வந்தவன்**, **வந்தவள்**, **வந்தவர்கள்**, **செய்தவன்**, and **படித்தவன்** should be tokenised as multiword tokens when the form contains both a relative participial/verbal element and a nominal or pronominal element. This tokenisation allows the verbal element to receive a verbal analysis and the nominal element to receive a nominal or pronominal analysis. 
 
-### Clitics
+### Multiword tokenisatoin of Clitics
 
 #### [-um / -உம் clitic documentation](um-clitic.md)
+
+### Multiword tokenisation of N+V and V+V compounds
+
+#### [N+V and V+V documentation](nv-vv.md)
