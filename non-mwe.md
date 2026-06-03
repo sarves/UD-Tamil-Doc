@@ -18,7 +18,7 @@ The form **முன்னேறினான்** should not be tokenised as:
 முன் + ஏறினான்
 ```
 
-## Noun + ஆக _āka_ / ஆன _āṉa_ Forms
+## 1 Noun + ஆக _āka_ / ஆன _āṉa_ Forms
 
 Tamil has forms where a noun combines with **ஆக** / _āka_ or **ஆன** / _āṉa_ to form adverbial or adjectival expressions. These forms should usually **not be split during multiword tokenisation** as they function as lexicalised adverbs or adjectives.
 
@@ -69,3 +69,6 @@ The form **முக்கியமான** should not be split as:
 ```
 
 More examples: அழகான beautiful, அமைதியான peaceful, தேவையான  necessary, சரியான  correct
+
+
+## 1 Noun + ஆக _āka_ / ஆன _āṉa_ Forms
