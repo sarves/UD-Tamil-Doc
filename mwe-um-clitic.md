@@ -41,12 +41,6 @@ Explanation:
 
 In **இராமனும் வந்தான்**, **-உம்** means ‘also/too’. It implies that Raman came in addition to others. Since it does not link two overt noun phrases in the sentence, it is treated as **PART**, not **CCONJ**.
 
-UD-oriented decision:
-
-```text
--உம் → PART
-```
-
 ---
 
 ### Scalar emphasis / சிறப்பு
@@ -57,23 +51,15 @@ Examples:
 
 | Surface form | Tokenisation | Gloss | Meaning |
 |---|---|---|---|
-| அறிஞருக்கும் எட்டாப்பொருள் | அறிஞர் + க்கு + உம் எட்டா + பொருள் | scholar-DAT-ADD reach.NEG-thing | a thing beyond even scholars |
-
-Rule:
+| அறிஞருக்கும் எட்டாப்பொருள் | அறிஞர்க்கு + உம் எட்டாப்பொருள் | scholar-DAT-ADD reach.NEG-thing | a thing beyond even scholars |
 
 ```text
-அறிஞருக்கும் → அறிஞர் + க்கு + உம்
+அறிஞருக்கும் → அறிஞர்க்கு + உம்
 ```
 
 Explanation:
 
 Here **-உம்** gives scalar focus. It means that the thing is beyond scholars too, or even beyond scholars. Since **-உம்** modifies the scope of one phrase and does not coordinate two overt elements, it is treated as **PART**.
-
-UD-oriented decision:
-
-```text
--உம் → PART
-```
 
 ---
 
@@ -97,12 +83,6 @@ Explanation:
 
 In **எல்லாரும் வந்தனர்**, **-உம்** contributes a totality meaning. It marks the whole set as included. It does not coordinate separate overt elements. Therefore, it is treated as **PART**.
 
-UD-oriented decision:
-
-```text
--உம் → PART
-```
-
 ---
 
 ### Concessive meaning / எதிர்மறை
@@ -113,23 +93,17 @@ Examples:
 
 | Surface form | Tokenisation | Gloss | Meaning |
 |---|---|---|---|
-| நாள் தவறினும் நாத்தவறான் | நாள் தவறு + இன் + உம் நா + தவறு + ஆன் | day fail-COND-CONC tongue-fail-NEG.3MSG | Even if the day fails, his word will not fail |
+| நாள் தவறினும் நாத்தவறான் | நாள் தவறின்  + உம் நாத்தவறான் | day fail-COND-CONC tongue-fail-NEG.3MSG | Even if the day fails, his word will not fail |
 
 Rule:
 
 ```text
-தவறினும் → தவறு + இன் + உம்
+தவறினும் → தவறின் + உம்
 ```
 
 Explanation:
 
 Here **-உம்** contributes a concessive meaning. It does not coordinate two overt comparable elements. Therefore, it is treated as **PART**.
-
-UD-oriented decision:
-
-```text
--உம் → PART
-```
 
 ---
 
@@ -178,12 +152,6 @@ Explanation:
 
 Here **-உம்** links several nominal elements: **நிலம்**, **நீர்**, and **தீ**. Since it links overt comparable elements in an enumeration, it functions as a coordinator.
 
-UD-oriented decision:
-
-```text
--உம் → CCONJ
-```
-
 ---
 
 ### Alternative or doubtful coordination / ஐயம்
@@ -194,7 +162,7 @@ Examples:
 
 | Surface form | Tokenisation | Gloss | Meaning |
 |---|---|---|---|
-| பத்தாயினும் எட்டாயினும் கிடைக்கும் | பத்து + ஆயின் + உம் எட்டு + ஆயின் + உம் கிடைக்கும் | ten-be.COND-CONJ eight-be.COND-CONJ get-FUT/PRS | Whether ten or eight, it will be available |
+| பத்தாயினும் எட்டாயினும் கிடைக்கும் | பத்தாயின் + உம் எட்டாயின் + உம் கிடைக்கும் | ten-be.COND-CONJ eight-be.COND-CONJ get-FUT | Whether ten or eight, it will be available |
 
 Rule:
 
@@ -206,12 +174,6 @@ Rule:
 Explanation:
 
 Here **-உம்** occurs in an alternative structure, similar to **whether…or**. Since it links comparable alternatives, it may be treated as **CCONJ**.
-
-UD-oriented decision:
-
-```text
--உம் → CCONJ
-```
 
 ---
 
@@ -228,19 +190,13 @@ Examples:
 Rule:
 
 ```text
-நன்றும் → நன்று + உம்
-தீதும் → தீது + உம்
+நன்றும் →  நன்று + உம்
+தீதும் →   தீது + உம்
 ```
 
 Explanation:
 
 Here **-உம்** participates in a paired contrastive structure. The expression is similar to **neither good nor bad**. Since it links two comparable elements in a contrastive coordination, it is treated as **CCONJ**.
-
-UD-oriented decision:
-
-```text
--உம் → CCONJ
-```
 
 ---
 
@@ -257,19 +213,14 @@ Examples:
 Rule:
 
 ```text
-நெடியனும் → நெடியன் + உம்
-வலியனும் → வலியன் + உம்
+நெடியனும் →  நெடியன் + உம்
+வலியனும் →   வலியன் + உம்
 ```
 
 Explanation:
 
 Here **-உம்** links two predicative nominal/adjectival elements: **நெடியன்** and **வலியன்**. Since these are coordinated predicative properties, **-உம்** functions as a conjunctive marker.
 
-UD-oriented decision:
-
-```text
--உம் → CCONJ
-```
 
 ---
 
