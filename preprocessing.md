@@ -42,10 +42,3 @@ Before UD annotation, all texts should be normalised and checked for ambiguous c
 * Do not modernise spelling unless the project requires it.
 
 ---
-
-## Treebanks
-
-There are two Tamil UD treebanks at present:
-
-  * [Tamil-TTB](../treebanks/ta_ttb/index.html)
-  * [Tamil-MWTT](../treebanks/ta_mwtt/index.html)
