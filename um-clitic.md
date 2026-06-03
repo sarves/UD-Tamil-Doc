@@ -1,13 +1,11 @@
-### Clitic
-
-#### Clitic **-உம் / -ம்** (-um)
+# Clitic **-உம் / -ம்** (-um)
 
 The form **-உம் / -ம்** is very common in Tamil texts. It is used to mark different syntactic and semantic functions in different constructions. Depending on the context, it may express additivity, emphasis, totality, concession, enumeration, alternative coordination, paired contrast, or predicative coordination.
 
 Traditional Tamil grammar, including the **Tolkāppiyam** tradition, identifies eight major uses of **-உம்**. In Universal Dependencies (UD), however, these uses can mostly be handled using either **PART** or **CCONJ**, depending on the syntactic role of **-உம்** in the sentence.
 
 
-##### Traditional uses of **-உம் / -ம்**
+## Traditional uses of **-உம் / -ம்**
 
 | Tamil term | English translation | Basic function |
 |---|---|---|
@@ -23,7 +21,7 @@ Traditional Tamil grammar, including the **Tolkāppiyam** tradition, identifies 
 
 ---
 
-##### Additive inclusion / எச்சம்
+## Additive inclusion / எச்சம்
 
 **எச்சம்** indicates an incomplete or residual meaning: the marked item is included, but other relevant items are also implied.
 
@@ -51,7 +49,7 @@ UD-oriented decision:
 
 ---
 
-##### Scalar emphasis / சிறப்பு
+### Scalar emphasis / சிறப்பு
 
 **சிறப்பு** gives special emphasis. It may elevate or lower the referent on a scale. In many contexts, it is close to English **even**.
 
@@ -79,7 +77,7 @@ UD-oriented decision:
 
 ---
 
-##### Totality / முற்று
+### Totality / முற்று
 
 **முற்று** indicates totality or completeness.
 
@@ -107,7 +105,7 @@ UD-oriented decision:
 
 ---
 
-##### Concessive meaning / எதிர்மறை
+### Concessive meaning / எதிர்மறை
 
 **எதிர்மறை** gives a contrary or concessive meaning, often similar to **even if**.
 
@@ -135,7 +133,7 @@ UD-oriented decision:
 
 ---
 
-##### **-உம் / -ம்** as `CCONJ`
+### **-உம் / -ம்** as `CCONJ`
 
 When **-உம் / -ம்** links two or more overt comparable elements, it functions conjunctively. In such cases, it participates in a coordination structure and may be treated as a coordinating conjunction.
 
@@ -158,7 +156,7 @@ This includes uses such as **எண்**, **ஐயம்**, **தெரிநி
 
 ---
 
-##### Enumeration / எண்
+### Enumeration / எண்
 
 **எண்** is used when several items are listed in sequence.
 
@@ -188,7 +186,7 @@ UD-oriented decision:
 
 ---
 
-##### Alternative or doubtful coordination / ஐயம்
+### Alternative or doubtful coordination / ஐயம்
 
 **ஐயம்** marks uncertainty, doubt, or alternatives. In UD terms, when **-உம்** links comparable alternatives, it can be treated as conjunctive.
 
@@ -217,7 +215,7 @@ UD-oriented decision:
 
 ---
 
-##### Paired contrast / தெரிநிலை
+### Paired contrast / தெரிநிலை
 
 **தெரிநிலை** clarifies a contrastive meaning, often in paired expressions.
 
@@ -246,7 +244,7 @@ UD-oriented decision:
 
 ---
 
-##### Predicative coordination / ஆக்கம்
+### Predicative coordination / ஆக்கம்
 
 **ஆக்கம்** indicates a change into another state or quality. In this use, **-உம்** often links two predicative nominal or adjectival elements.
 
@@ -275,7 +273,7 @@ UD-oriented decision:
 
 ---
 
-
+##In short...
 
 The annotation of **-உம் / -ம்** should be based on its syntactic function, not only on the traditional Tamil grammatical label.
 
