@@ -9,8 +9,8 @@ Therefore, such forms should **not** be split during multiword tokenisation.
 ### Example
 
 ```text
-அவன் வாழ்க்கையில் முன்னேறினான்.
-he      life-LOC          progress-PST-3SG.M
+அவன் வாழ்க்கையில்  முன்னேறினான்.
+he   life-LOC   progress-PST-3SG.M
 He progressed in life.
 ```
 
@@ -32,7 +32,7 @@ Example:
 
 ```text
 அவன் அமைதியாக பேசினான்
-he      calmly          speak-PST-3SG.M
+he   calmly    speak-PST-3SG.M
 He spoke calmly
 
 
@@ -55,9 +55,8 @@ The element **ஆன** / _āṉa_ can combine with a noun to form an adjectival 
 Example:
 
 ```text
-அவன் முக்கியமான முடிவை எடுத்தான்.
-அவன்    முக்கியமான      முடிவை        எடுத்தான்
-he      important       decision-ACC  take-PST-3SG.M
+அவன் முக்கியமான   முடிவை         எடுத்தான்.
+he   important  decision-ACC  take-PST-3SG.M
 He took an important decision.
 
 முக்கியமான    ADJ     amod
@@ -104,8 +103,8 @@ These forms should be treated as **example lexicalised forms**, not as automatic
 For example:
 
 ```text
-அவன் உண்மையைக் கண்டுபிடித்தான்.
-he      truth-ACC      discover-PST-3SG.M
+அவன் உண்மையைக்  கண்டுபிடித்தான்.
+he   truth-ACC  discover-PST-3SG.M
 He discovered the truth.
 ```
 
@@ -142,9 +141,9 @@ Some **V + V** constructions may also show light-verb-like behaviour, especially
 For example:
 
 ```text
-அவன் கதவை மூடிவைத்தான்.
-அவன்    கதவை      மூடி        வைத்தான்
-he      door-ACC   close-VRP   keep-PST-3SG.M
+அவன் கதவை     மூடிவைத்தான்
+அவன் கதவை     மூடி          வைத்தான்
+he   door-ACC  close-VRP   keep-PST-3SG.M
 He kept the door closed.
 ```
 
@@ -152,13 +151,12 @@ Here, **வை** normally means “keep” or “place”. However, in this cons
 
 ```text
 அவன் புத்தகத்தை எடுத்துகொண்டான்.
-அவன்    புத்தகத்தை      எடுத்து      கொண்டான்
-he      book-ACC        take-VRP    hold-PST-3SG.M
+அவன்    புத்தகத்தை      எடுத்து        கொண்டான்
+he      book-ACC      take-VRP    hold-PST-3SG.M
 He took the book (for himself).
 ```
 
 Here, **கொள்** adds a reflexive or self-benefactive meaning. It has a weakened lexical meaning and supports the main verb **எடுத்து**.
-
 The final analysis depends on the syntactic behaviour of the construction and the meaning contributed by the second verb.
 
 The general principle is:
