@@ -131,6 +131,7 @@ Therefore, annotators should not assign a category only by looking at the verb f
 | Non-attitude | கொள் | koḷ | take, hold | reflexive / self-benefactive |
 | Non-attitude | பார் | pār | see, look | attemptive, try |
 | Non-attitude | வை | vai | keep, place | resultative / causative-like support |
+
 Source: Thomas Lehmann, *A Grammar of Modern Tamil*, Pondicherry Institute of Linguistics and Culture, 1989.
 
 ---
@@ -222,6 +223,64 @@ Possible UD analysis:
 ```
 
 ---
+
+## Multiple Verbal Tokens within One Surface Token
+
+A single Tamil surface token may contain more than two verbal/nominal tokens. This is common in complex predicate constructions, where a lexical verb/noun combines with one or more auxiliary or support verbs. 
+
+Such forms should be segmented when the internal verbal elements function as separate syntactic units in UD annotation.
+
+#### Example 1: படித்துக்கொண்டிருந்தான்
+
+```text
+படித்துக்கொண்டிருந்தான்
+படித்து  கொண்டு  இருந்தான்
+study-VRP    hold-VRP     be-PST-3SG.M
+He was studying.
+```
+
+Possible interpretation:
+
+| Segment | Gloss | Function |
+|---|---|---|
+| படித்து | study-VRP | lexical verb |
+| கொண்டு | hold-VRP | progressive auxiliary element |
+| இருந்தான் | be-PST-3SG.M | progressive and carrying tense and agreement |
+
+Therefore, it these tokens can be analysed like,
+```text
+படித்து      VERB
+கொண்டு      AUX
+இருந்தான்    AUX
+```
+
+However, the exact dependency relations should be determined during syntactic annotation, but the form should be tokenised into its verbal components.
+
+#### Example 2: கைதுசெய்யப்பட்டான்
+
+```text
+கைதுசெய்யப்பட்டான்
+கைது  செய்ய  பட்டான்
+arrest.N    do-INF      undergo-PST-3SG.M
+He was arrested.
+```
+
+Possible interpretation:
+
+| Segment | Gloss | Function |
+|---|---|---|
+| கைது | arrest.N | lexical noun / predicate noun |
+| செய்ய | do-INF | verbaliser |
+| பட்டான் | undergo-PST-3SG.M | passive auxiliary |
+
+Therefore, the possible analyse could be:
+
+```text
+கைது       NOUN
+செய்ய      VERB
+பட்டான்    AUX
+```
+
 
 ## Summary of Distinctions
 
