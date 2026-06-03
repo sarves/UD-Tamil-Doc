@@ -30,3 +30,20 @@ is tokenised as:
 After this basic tokenisation, multiword tokens must be identified and split where necessary. This is a critical stage in Tamil UD annotation, because a single written form may contain more than one syntactic word. Such cases cannot be handled by simple whitespace- or punctuation-based tokenisation alone.
 
 Multiword tokenisation requires careful linguistic analysis. Annotators should decide whether a surface form should be split by considering its syntactic function, morphological structure, and the UD guidelines. Some common cases include forms involving clitics, auxiliaries, postpositions, and particles.
+
+## Multiword Tokens
+
+In Tamil, spaces are normally used to separate tokens in a sentence. If two words are separated by a space, they are usually treated as different tokens. However, Tamil also has many surface forms where more than one linguistic unit is written together as a single orthographic word.
+
+These forms may include noun-noun compounds, verb-verb compounds, verb-noun forms, and words with clitics. For example:
+
+| Type | Example | Possible segmentation |
+|---|---|---|
+| Noun-noun compound | விசைப்படகு | விசை + படகு |
+| Verb-verb compound | வந்துகொண்டிருக்கிறான் | வந்து + கொண்டு + இருக்கிறான் |
+| Verb-noun form | செய்தவன் | செய்த + அவன் |
+| Clitic attachment | அவனும் | அவன் + உம் |
+
+Such forms may need to be split into multiple syntactic tokens depending on the context and the UD annotation principles. The purpose is not to split every compound word mechanically, but to identify cases where the parts function as separate syntactic units.
+
+Multiword tokenisation is important because a single written Tamil word may contain information that corresponds to more than one syntactic word. If these forms are not split, it becomes difficult to assign accurate UPOS tags, morphological features, and dependency relations. It also affects cross-lingual comparison, because the same syntactic structure may be represented as separate words in another language. Therefore, careful multiword tokenisation helps make Tamil annotation more consistent, transparent, and comparable with other UD treebanks.
