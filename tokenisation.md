@@ -48,13 +48,13 @@ Such forms may need to be split into multiple syntactic tokens depending on the 
 
 Multiword tokenisation is important because a single written Tamil word may contain information that corresponds to more than one syntactic word. If these forms are not split, it becomes difficult to assign accurate UPOS tags, morphological features, and dependency relations. It also affects cross-lingual comparison, because the same syntactic structure may be represented as separate words in another language. Therefore, careful multiword tokenisation helps make Tamil annotation more consistent, transparent, and comparable with other UD treebanks.
 
-### Participial Nouns / வினையாலணையும் பெயர்
+### MWE-01: Participial Nouns / வினையாலணையும் பெயர்
 
 Participial nouns are forms that combine verbal and nominal properties. For example, **வந்தவன்** means “the one who came” or “the man who came”. It contains a verbal element, **வந்த** “came / who came”, and a nominal or pronominal element, **அவன்** “he / man”.
 
 In UD annotation, these forms are treated as multiword tokens because they cannot be assigned a single UPOS category in a satisfactory way. The first part shows verbal behaviour, including tense information, while the second part shows nominal behaviour, such as reference to person, gender, number, and case-marking potential. Therefore, these forms should be tokenised into separate syntactic words.
 
-This treatment is motivated by the mixed-category nature of such forms: they show both verbal and nominal properties. For this reason, participial nouns should be split during multiword tokenisation.
+This treatment is motivated by the mixed-category nature of such forms (https://kops.uni-konstanz.de/server/api/core/bitstreams/72c0aa32-7778-4f88-be85-79dcb3d4a0ba/content) : they show both verbal and nominal properties. For this reason, participial nouns should be split during multiword tokenisation.
 
 | Surface form | Tokenisation | Gloss | Meaning |
 |---|---|---|---|
@@ -72,6 +72,8 @@ This treatment is motivated by the mixed-category nature of such forms: they sho
 come-PRS.RP  they/people   students
 The people who are coming are students.
 ```
+
+
 
 #### Annotation Guideline
 
