@@ -60,7 +60,7 @@ In UD annotation, these elements are treated according to their syntactic functi
 
 ---
 
-## MWE-02: Auxiliary Verb Constructions
+## Auxiliary Verb Constructions
 
 Auxiliary verb constructions involve a lexical verb and an auxiliary verb. The auxiliary verb contributes grammatical meaning such as aspect, mood, passive voice, causation, polarity, or attitude.
 
@@ -132,7 +132,7 @@ Source: Thomas Lehmann, *A Grammar of Modern Tamil*, Pondicherry Institute of Li
 
 ---
 
-## MWE-03: Serial Verb Constructions
+## Serial Verb Constructions
 
 Serial verb constructions involve more than one verb in the same clause, where the verbs together describe a closely connected event sequence. In Tamil, the first verb often appears in the verbal participle form.
 
@@ -162,7 +162,7 @@ In this construction, both verbs contribute lexical meaning. The action involves
 
 ---
 
-## MWE-04: Light Verb Constructions
+## Light Verb Constructions
 
 Light verb constructions involve a noun or verbal noun combined with a light verb. The noun carries the main lexical meaning, while the verb has a weak or bleached lexical meaning. The verb mainly contributes verbal features such as tense, agreement, aspect, and argument structure. Together, the noun and the light verb form a single predicate and license the arguments of the clause.
 
@@ -192,7 +192,7 @@ Here, **உதவி** “help” provides the main lexical meaning, while **ச
 
 ---
 
-## MWE-05: Open Clausal Complements / xcomp
+## Open Clausal Complements / xcomp
 
 Some V+V constructions involve an infinitival verb followed by another verb. In such cases, the first verb functions as an open clausal complement of the second verb. In UD, these are commonly analysed using the label `xcomp`.
 
