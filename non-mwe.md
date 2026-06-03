@@ -71,4 +71,102 @@ The form **முக்கியமான** should not be split as:
 More examples: அழகான beautiful, அமைதியான peaceful, தேவையான  necessary, சரியான  correct
 
 
-## 1 Noun + ஆக _āka_ / ஆன _āṉa_ Forms
+## 2 Lexicalised V+V compounds
+
+### Candidate Lexicalised V + V Forms
+
+The following forms are some examaples for **lexicalised V + V forms** in many contexts. However, this classification should be verified carefully. These forms should not be split mechanically just because they appear to contain more than one verbal element. 
+
+The best way to check whether a form is lexicalised is to consult a modern dictionary, such as the University of Madras (this is not a modern lexicon, but still useful) *Tamil Lexicon*, or Tamilcube, and to check how the form is actually used in a corpus.
+
+| Candidate lexicalised form | Possible internal structure | Gloss | Meaning |
+|---|---|---|---|
+| கண்டுபிடி | கண்டு + பிடி | find/discover | discover |
+| தேடிப்பிடி | தேடி + பிடி | search.and.find | findout |
+| கலந்துகொள் | கலந்து + கொள் | participate | participate |
+| ஒப்புக்கொள் | ஒப்பு + கொள் | accept/agree | accept |
+| ஏற்றுக்கொள் | ஏற்று + கொள் | accept | accept |
+| தெரிந்துகொள் | தெரிந்து + கொள் | come.to.know | learn / come to know |
+| புரிந்துகொள் | புரிந்து + கொள் | understand | understand |
+| அறிந்துகொள் | அறிந்து + கொள் | come.to.know | to become aware / learn |
+| கற்றுக்கொள் | கற்று + கொள் | learn | to learn |
+| காத்திரு | காத்து + இரு | wait | to wait |
+| எழுந்திரு | எழுந்து + இரு | rise/get.up | to get up / rise |
+| பதிவுசெய் | பதிவு + செய் | register/record | to register / record |
+| முடிவுசெய் | முடிவு + செய் | decide | to decide |
+
+#### Guideline
+
+These forms should be treated as **example lexicalised forms**, not as automatically fixed cases. Annotators should check the context before deciding whether to split them.
+
+For example:
+
+```text
+அவன் உண்மையைக் கண்டுபிடித்தான்.
+he      truth-ACC      discover-PST-3SG.M
+He discovered the truth.
+```
+
+In this sentence, **கண்டுபிடித்தான்** functions as a single lexical verb meaning “discovered”. Therefore, it should not be split as:
+
+```text
+கண்டு + பிடித்தான்
+```
+
+However, annotators should always verify whether the form is lexicalised in the given context.
+
+```text
+1. Check whether the full form appears as a dictionary entry.
+4. Check corpus examples to see how the form is used in real sentences, whether the internal verbs contribute separate syntactic meanings.
+5. If the form behaves as a single lexical verb, do not split it.
+6. If the internal parts function as separate syntactic units, and license different arguments, split it
+```
+
+#### Important Note 1
+
+Dictionary evidence alone is not always enough. Some forms may be lexicalised in one context but compositional in another. Therefore, corpus evidence and sentence context are important.
+
+The general rule is:
+
+```text
+Verify each case using dictionary evidence, corpus evidence, and sentence context.
+Do not split them unless the internal verbal elements clearly function as separate syntactic units.
+```
+
+### Important Note 2:  on V + V Light-Verb-like Constructions
+
+Some **V + V** constructions may also show light-verb-like behaviour, especially when the second verb has a weakened or bleached lexical meaning.
+
+For example:
+
+```text
+அவன் கதவை மூடிவைத்தான்.
+அவன்    கதவை      மூடி        வைத்தான்
+he      door-ACC   close-VRP   keep-PST-3SG.M
+He kept the door closed.
+```
+
+Here, **வை** normally means “keep” or “place”. However, in this construction, it contributes a resultative meaning: the result of closing continues to hold, and both of these verbs together license arguments. Therefore, this may be described as a **V + V light-verb-like construction**.
+
+```text
+அவன் புத்தகத்தை எடுத்துகொண்டான்.
+அவன்    புத்தகத்தை      எடுத்து      கொண்டான்
+he      book-ACC        take-VRP    hold-PST-3SG.M
+He took the book (for himself).
+```
+
+Here, **கொள்** adds a reflexive or self-benefactive meaning. It has a weakened lexical meaning and supports the main verb **எடுத்து**.
+
+The final analysis depends on the syntactic behaviour of the construction and the meaning contributed by the second verb.
+
+The general principle is:
+
+```text
+V + V constructions with a bleached second verb and monoclausal in nature may be light-verb-like, but they should not be labelled mechanically. The context should determine whether the relation is auxiliary-like, serial-verb-like, or light-verb-like. Because, the same verb may function as a lexical verb, auxiliary, serial verb component, or light-verb-like element depending on the sentence context.
+```
+
+
+## 3 Lexicalised N+N compounds
+
+
+
