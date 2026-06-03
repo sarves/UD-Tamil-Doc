@@ -1,4 +1,6 @@
-## Lexicalised ADV + Verb Forms
+
+
+## 1.0 Lexicalised ADV + Verb Forms
 
 Some Tamil verbs may appear to contain an adverbial element plus a verb. For example, **முன்னேறு, பின்வாங்கு** can be understood as involving **முன்** “front / forward” and **ஏறு** “climb / rise”. However, in modern usage, **முன்னேறு** functions as a single lexical verb meaning “advance”, “progress”, or “move forward”.
 
@@ -18,7 +20,7 @@ The form **முன்னேறினான்** should not be tokenised as:
 முன் + ஏறினான்
 ```
 
-## 1 Noun + ஆக _āka_ / ஆன _āṉa_ Forms
+## 2.0 Noun + ஆக _āka_ / ஆன _āṉa_ Forms
 
 Tamil has forms where a noun combines with **ஆக** / _āka_ or **ஆன** / _āṉa_ to form adverbial or adjectival expressions. These forms should usually **not be split during multiword tokenisation** as they function as lexicalised adverbs or adjectives.
 
@@ -71,7 +73,7 @@ The form **முக்கியமான** should not be split as:
 More examples: அழகான beautiful, அமைதியான peaceful, தேவையான  necessary, சரியான  correct
 
 
-## 2 Lexicalised V+V compounds
+## 3.0 Lexicalised V+V compounds
 
 ### Candidate Lexicalised V + V Forms
 
@@ -166,7 +168,7 @@ V + V constructions with a bleached second verb and monoclausal in nature may be
 ```
 
 
-## 3 Lexicalised N+N compounds
+## 4.0 Lexicalised N+N compounds
 
 
 
