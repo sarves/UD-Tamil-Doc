@@ -47,3 +47,32 @@ These forms may include noun-noun compounds, verb-verb compounds, verb-noun form
 Such forms may need to be split into multiple syntactic tokens depending on the context and the UD annotation principles. The purpose is not to split every compound word mechanically, but to identify cases where the parts function as separate syntactic units.
 
 Multiword tokenisation is important because a single written Tamil word may contain information that corresponds to more than one syntactic word. If these forms are not split, it becomes difficult to assign accurate UPOS tags, morphological features, and dependency relations. It also affects cross-lingual comparison, because the same syntactic structure may be represented as separate words in another language. Therefore, careful multiword tokenisation helps make Tamil annotation more consistent, transparent, and comparable with other UD treebanks.
+
+### Participial Nouns / வினையாலணையும் பெயர்
+
+Participial nouns are forms that combine verbal and nominal properties. For example, **வந்தவன்** means “the one who came” or “the man who came”. It contains a verbal element, **வந்த** “came / who came”, and a nominal or pronominal element, **அவன்** “he / man”.
+
+In UD annotation, these forms are treated as multiword tokens because they cannot be assigned a single UPOS category in a satisfactory way. The first part shows verbal behaviour, including tense information, while the second part shows nominal behaviour, such as reference to person, gender, number, and case-marking potential. Therefore, these forms should be tokenised into separate syntactic words.
+
+This treatment is motivated by the mixed-category nature of such forms: they show both verbal and nominal properties. For this reason, participial nouns should be split during multiword tokenisation.
+
+| Surface form | Tokenisation | Gloss | Meaning |
+|---|---|---|---|
+| வந்தவன் | வந்த + அவன் | come-PST.RP + he/man | the man who came |
+| வந்தவள் | வந்த + அவள் | come-PST.RP + she/woman | the woman who came |
+| வந்தவர்கள் | வந்த + அவர்கள் | come-PST.RP + they/people | the people who came |
+| வருகிறவர்கள் | வருகிற + அவர்கள் | come-PRS.RP + they/people | the people who come / are coming |
+
+#### Example
+
+```text
+வருகிறவர்கள் மாணவர்கள்.
+வருகிற அவர்கள் மாணவர்கள் .
+வருகிற       அவர்கள்       மாணவர்கள்
+come-PRS.RP  they/people   students
+The people who are coming are students.
+```
+
+#### Annotation Guideline
+
+Participial nouns such as **வந்தவன்**, **வந்தவள்**, **வந்தவர்கள்**, **செய்தவன்**, and **படித்தவன்** should be tokenised as multiword tokens when the form contains both a relative participial/verbal element and a nominal or pronominal element. This tokenisation allows the verbal element to receive a verbal analysis and the nominal element to receive a nominal or pronominal analysis. 
