@@ -73,20 +73,9 @@ V + AUX
 Example:
 
 ```text
-அவன் செய்துவிட்டான். 
-```
-
-Tokenisation:
-
-```text
-அவன் செய்து விட்டான் .
-```
-
-Gloss:
-
-```text
-அவன்    செய்து     விட்டான்
-he      do-CVB     leave-PST-3SG.M
+அவன்   செய்துவிட்டான்
+அவன்   செய்து     விட்டான்
+he     do-CVB    leave-PST-3SG.M
 He finished doing it.
 ```
 Here, **விடு** has the lexical meaning “leave”, but in this construction it contributes completive aspect.
@@ -149,9 +138,9 @@ V-CVB + V
 Example:
 
 ```text
-அவன் ஓடிவந்தான்.
-அவன் ஓடி வந்தான் .
-he      run-CVB    come-PST-3SG.M
+அவன்     ஓடிவந்தான்
+அவன்     ஓடி         வந்தான் 
+he       run-CVB    come-PST-3SG.M
 He came running.
 ```
 
@@ -159,7 +148,7 @@ Possible UD analysis:
 
 ```text
 ஓடி       VERB
-வந்தான்   VERB     and the rel lable would be compound:svc
+வந்தான்    VERB     and the rel lable would be compound:svc
 ```
 
 In this construction, both verbs contribute lexical meaning. The action involves both **running** and **coming**. Therefore, this is different from an auxiliary construction, where the second verb mainly contributes grammatical meaning.
@@ -170,7 +159,7 @@ In this construction, both verbs contribute lexical meaning. The action involves
 
 Light verb constructions involve a noun or verbal noun combined with a light verb. The noun carries the main lexical meaning, while the verb has a weak or bleached lexical meaning. The verb mainly contributes verbal features such as tense, agreement, aspect, and argument structure. Together, the noun and the light verb form a single predicate and license the arguments of the clause.
 
-More research should be done related to V+V light verb constructions. In this documentation, we focus more on N+V construction:
+### N + V light verb construction:
 
 ```text
 N + V
@@ -180,21 +169,52 @@ Example:
 
 ```text
 அவன் உதவிசெய்தான்.
-அவன் உதவி செய்தான் .
-he      help.N    do-PST-3SG.M
+அவன் உதவி       செய்தான் .
+he   help.N     do-PST-3SG.M
 He helped.
 ```
 
 Possible UD analysis:
 
 ```text
-உதவி       NOUN
+உதவி      NOUN
 செய்தான்   VERB     and the rel lable would be compound:lvc
 ```
 
 Here, **உதவி** “help” provides the main lexical meaning, while **செய்** “do” functions as a light verb / verbaliser in this case. The construction as a whole behaves like a predicate.
 
 ---
+
+### V + V light verb constructions
+
+**V + V** constructions may also show light-verb-like behaviour, especially when the second verb has a weakened or bleached lexical meaning.
+
+For example:
+
+```text
+அவன் கதவை     மூடிவைத்தான்
+அவன் கதவை     மூடி          வைத்தான்
+he   door-ACC  close-VRP   keep-PST-3SG.M
+He kept the door closed.
+```
+
+Here, **வை** normally means “keep” or “place”. However, in this construction, it contributes a resultative meaning: the result of closing continues to hold, and both of these verbs together license arguments. Therefore, this may be described as a **V + V light-verb-like construction**.
+
+```text
+அவன்    புத்தகத்தை      எடுத்துகொண்டான்.
+அவன்    புத்தகத்தை      எடுத்து        கொண்டான்
+he      book-ACC      take-VRP    hold-PST-3SG.M
+He took the book (for himself).
+```
+
+Here, **கொள்** adds a reflexive or self-benefactive meaning. It has a weakened lexical meaning and supports the main verb **எடுத்து**.
+The final analysis depends on the syntactic behaviour of the construction and the meaning contributed by the second verb.
+
+The general principle is:
+
+```text
+V + V constructions with a bleached second verb and monoclausal in nature may be light-verb-like, but they should not be labelled mechanically. The context should determine whether the relation is auxiliary-like, serial-verb-like, or light-verb-like. Because, the same verb may function as a lexical verb, auxiliary, serial verb component, or light-verb-like element depending on the sentence context.
+```
 
 ## Open Clausal Complements / xcomp
 
@@ -209,16 +229,16 @@ V-INF + V
 Example:
 
 ```text
-அவன் படிக்கவிரும்புகிறான்.
-அவன் படிக்க விரும்புகிறான் .
-he      study-INF    want-PRS-3SG.M
+அவன் படிக்கவிரும்புகிறான்
+அவன் படிக்க         விரும்புகிறான் 
+he   study-INF    want-PRS-3SG.M
 He wants to study.
 ```
 
 Possible UD analysis:
 
 ```text
-படிக்க          VERB     and the rel lable would be xcomp
+படிக்க        VERB     and the rel lable would be xcomp
 விரும்புகிறான்   VERB
 ```
 
@@ -234,8 +254,8 @@ Such forms should be segmented when the internal verbal elements function as sep
 
 ```text
 படித்துக்கொண்டிருந்தான்
-படித்து  கொண்டு  இருந்தான்
-study-VRP    hold-VRP     be-PST-3SG.M
+படித்து      கொண்டு      இருந்தான்
+study-VRP  hold-VRP    be-PST-3SG.M
 He was studying.
 ```
 
@@ -250,7 +270,7 @@ Possible interpretation:
 Therefore, it these tokens can be analysed like,
 ```text
 படித்து      VERB
-கொண்டு      AUX
+கொண்டு     AUX
 இருந்தான்    AUX
 ```
 
@@ -260,8 +280,8 @@ However, the exact dependency relations should be determined during syntactic an
 
 ```text
 கைதுசெய்யப்பட்டான்
-கைது  செய்ய  பட்டான்
-arrest.N    do-INF      undergo-PST-3SG.M
+கைது      செய்ய    பட்டான்
+arrest.N  do-INF   undergo-PST-3SG.M
 He was arrested.
 ```
 
@@ -276,9 +296,9 @@ Possible interpretation:
 Therefore, the possible analyse could be:
 
 ```text
-கைது       NOUN
-செய்ய      VERB
-பட்டான்    AUX
+கைது     NOUN
+செய்ய    VERB
+பட்டான்   AUX
 ```
 
 
