@@ -93,7 +93,9 @@ Here, **விடு** has the lexical meaning “leave”, but in this construc
 
 ### Auxiliary Verbs in Tamil
 
-Source: Thomas Lehmann, *A Grammar of Modern Tamil*, Pondicherry Institute of Linguistics and Culture, 1989.
+The auxiliary classifications given in the following table are illustrative rather than fixed. The same verb may function differently depending on the sentence context. For example, a verb may be used as a lexical verb in one sentence, as an auxiliary in another, and as part of a serial verb or light verb construction elsewhere.
+
+Therefore, annotators should not assign a category only by looking at the verb form. They should examine the full construction, the meaning contributed by the verb, and its syntactic relation to the other elements in the sentence. The final distinction between auxiliary, serial verb, light verb, and `xcomp` constructions should be made during syntactic annotation using the appropriate UD labels.
 
 | Grammatical type | Tamil auxiliary | Transliteration | Lexical meaning | Grammatical meaning |
 |---|---|---|---|---|
@@ -129,6 +131,7 @@ Source: Thomas Lehmann, *A Grammar of Modern Tamil*, Pondicherry Institute of Li
 | Non-attitude | கொள் | koḷ | take, hold | reflexive / self-benefactive |
 | Non-attitude | பார் | pār | see, look | attemptive, try |
 | Non-attitude | வை | vai | keep, place | resultative / causative-like support |
+Source: Thomas Lehmann, *A Grammar of Modern Tamil*, Pondicherry Institute of Linguistics and Culture, 1989.
 
 ---
 
