@@ -853,116 +853,26 @@ Annotation:
 
 # 27. Sandhi
 
-`Sandhi` is proposed as a Tamil-specific feature to record surface changes caused by sound combination or orthographic joining.
+`Sandhi` is proposed as a Tamil-specific feature to record surface changes.
 
 ## Proposed values
 
 ```text
-Sandhi=Yes
-Sandhi=No
+Sandhi=k  க் 
+Sandhi=c  ச் 
+Sandhi=t  த் 
+Sandhi=p  ப் 
 ```
 
-Example:
+Tamil morphological analysis and syntactic annotation are often affected by sandhi, as sandhi may introduce restrictions on how words are segmented and interpreted. In some cases, sandhi markers may also indicate genitive-like relations, as in கதிரைக் கால் compared with கதிரை கால்.
 
-```text
-கார்ரோட்டிச் சென்றான் .
-kārrōṭṭic ceṉṟāṉ
-car-road-SANDHI went
-“He went by the car road / on the car road.”
-```
+Marking sandhi is also useful because, in contemporary writing, some writers do not consistently represent sandhi. Therefore, sandhi marking can provide valuable features for studying variation in Tamil texts, including changes across time, generations, genres and writing styles.
 
-Possible underlying form:
 
-```text
-கார்ரோட்டி + சென்றான்
-```
-
-Annotation:
-
-```text
-கார்ரோட்டிச்    NOUN/ADV    Sandhi=Yes
-```
-
-## Why Sandhi is useful
-
-Tamil tokenisation and morphological analysis are often affected by sandhi. Surface forms may include additional consonants, changed endings, or joined forms that are not directly visible in the underlying lexical form. If this information is not recorded, annotators and automatic tools may find it difficult to recover the intended segmentation, lemma, or syntactic relation.
-
-`Sandhi=Yes` can be useful when:
-
-```text
-1. the surface form differs from the expected underlying form;
-2. the change affects tokenisation or lemma identification;
-3. the form is produced by regular Tamil sandhi;
-4. the annotation project wants to preserve the original text while documenting the underlying analysis.
-```
-
-Note: Since `Sandhi` is not a core universal UD feature, the treebank should define it clearly as a Tamil-specific extension. If the project does not want to introduce a new FEATS value, the information may alternatively be recorded in the `MISC` column.
+Note: Since `Sandhi` is not a core universal UD feature, the treebank should define it clearly as a Tamil-specific extension. 
 
 ---
-
-# Full Feature Bundle Examples
-
-The following examples show that annotators should include all relevant features, not just one feature.
-
-## Example 1: Finite verb with tense, person, number, and gender
-
-```text
-அவள் வந்தாள் .
-avaḷ vantāḷ
-she came
-“She came.”
-```
-
-Annotation:
-
-```text
-அவள்       PRON    PronType=Prs|Gender=Fem|Number=Sing|Person=3
-வந்தாள்    VERB    Tense=Past|VerbForm=Fin|Gender=Fem|Number=Sing|Person=3
-.          PUNCT   PunctType=Peri
-```
-
-## Example 2: Demonstrative with Tamil-specific deixis
-
-```text
-உவன் புத்தகத்தை எடுத்தான் .
-uvaṉ puttakatthai eṭuttāṉ
-that.person.MED book-ACC took
-“That person took the book.”
-```
-
-Annotation:
-
-```text
-உவன்          PRON    PronType=Dem|Deixis=Med|Gender=Masc|Number=Sing|Person=3
-புத்தகத்தை    NOUN    Case=Acc|Animacy=Inan|Number=Sing
-எடுத்தான்     VERB    Tense=Past|VerbForm=Fin|Gender=Masc|Number=Sing|Person=3
-.             PUNCT   PunctType=Peri
-```
-
-## Example 3: Negative modal construction
-
-```text
-நான் விட மாட்டேன் .
-nāṉ viṭa māṭṭēṉ
-I leave-INF will.not
-“I will not leave.”
-```
-
-Annotation:
-
-```text
-நான்       PRON    PronType=Prs|Person=1|Number=Sing
-விட        VERB    VerbForm=Inf
-மாட்டேன்    AUX     Polarity=Neg|VerbForm=Fin|Person=1|Number=Sing
-.          PUNCT    PunctType=Peri
-```
-
----
-
-# Final Reminder
 
 Morphological annotation should be rich enough to support syntactic analysis. Annotators should not stop after identifying only UPOS or one obvious feature. Add all relevant features that are visible in the form and justified by the context.
 
-```text
-Good annotation = UPOS + lemma + all relevant morphological features + dependency relation.
-```
+
