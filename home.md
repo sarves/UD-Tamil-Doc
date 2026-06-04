@@ -10,7 +10,7 @@ These guidelines should be used together with the official UD documentation. Ann
 |---|---|---|
 | Preprocessing | Guidelines for Unicode normalisation, replacement of ambiguous characters, and preparation of text before annotation. | [Preprocessing](preprocessing.md) |
 | Tokenisation and Multiword Tokenisation | Guidelines for sentence tokenisation, word tokenisation, multiword tokenisation, clitic segmentation, ADP segmentation, and cases where forms should not be split. | [Tokenisation](tokenisation.md) |
-| Morphological Features | Guidelines for annotating UD morphological features in Tamil, including Tamil-specific features such as deixis, rationality, sandhi, case, and differential object marking. | [Morphological Features](features.md) |
+| Morphological Features | Guidelines for annotating UD morphological features in Tamil, including Tamil-specific features such as deixis,  sandhi, and case. | [Morphological Features](features.md) |
 
 ## How to Use These Guidelines
 
