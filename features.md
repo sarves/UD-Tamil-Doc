@@ -608,16 +608,17 @@ Possible annotation:
 ```text
 Voice=Act
 Voice=Pass
-Voice=Cau    if causative is annotated as voice
+Voice=Cau    
 ```
 
 Example:
 
 ```text
-குமார் அப்பாவால் அடிக்கப் பட்டான் .
-kumār appāvāl aṭikkap paṭṭāṉ
-Kumar father-INS beat-INF undergo-PST-3SG.M
-“Kumar was beaten by his father.”
+குமார்  அப்பாவால்    அடிக்கப்பட்டான்
+குமார்  அப்பாவால்    அடிக்கப்    பட்டான்
+kumār appāvāl    aṭikkap   paṭṭāṉ
+Kumar father-INS beat-INF  undergo-PST-3SG.M
+Kumar was beaten by his father
 ```
 
 Annotation:
@@ -642,10 +643,11 @@ Polarity=Pos
 Example:
 
 ```text
-நான் விட மாட்டேன் .
-nāṉ viṭa māṭṭēṉ
+நான் விடமாட்டேன்
+நான் விட     மாட்டேன்
+nāṉ viṭa    māṭṭēṉ
 I leave-INF will.not
-“I will not leave.”
+I will not leave
 ```
 
 Annotation:
@@ -671,17 +673,17 @@ Person=3
 Example:
 
 ```text
-நான் வருகிறேன் .
-nāṉ varukiṟēṉ
-I come-PRS-1SG
-“I am coming.”
+நான்   வருகிறேன்
+nāṉ   varukiṟēṉ
+I     come-PRS-1SG
+I am coming
 ```
 
 Annotation:
 
 ```text
 நான்         PRON    PronType=Prs|Person=1|Number=Sing
-வருகிறேன்    VERB    Tense=Pres|VerbForm=Fin|Person=1|Number=Sing
+வருகிறேன்     VERB    Tense=Pres|VerbForm=Fin|Person=1|Number=Sing
 ```
 
 ---
@@ -696,26 +698,24 @@ Annotation:
 Polite=Form   formal / honorific
 Polite=Infm   informal
 Polite=Elev   elevated honorific title
-Polite=Humb   humble / deferential
 ```
 
 Example:
 
 ```text
-அவர் வந்தார் .
-avar vantār
-he.HON came
-“He came.”
+மேதகு      தமிழக      முதலமைச்சர்       கொடி ஏற்றினார்.
+mētaku     tamiḻaka  mutalamaiccar   koṭi ēṟṟiṉār
+honourable Tamil.Nadu chief.minister flag hoist-PST.3SG.COM
+‘The Honourable Chief Minister of Tamil Nadu hoisted the flag.
 ```
 
 Annotation:
 
 ```text
-அவர்       PRON    PronType=Prs|Person=3|Number=Sing|Polite=Form
-வந்தார்    VERB    Tense=Past|VerbForm=Fin|Person=3|Number=Sing|Polite=Form
+மேதகு          ADJ    Polite=Elev
 ```
 
-Note: Tamil honorific marking can override ordinary number/gender agreement. The annotation policy should define how to handle honorific plural forms used for a single person.
+Note: Tamil honorific marking can override ordinary number/gender agreement. The annotation policy should define how to handle honorific plural forms used for a single person. Because, in the example above, it can also be written as ஏற்றினார்கள், where -கள் is a plural marker, but it also gives an additional honorific meaning.
 
 ---
 
@@ -733,8 +733,8 @@ Clusivity=Ex   exclusive we
 Example:
 
 ```text
-நாம் செல்வோம் .
-nām celvōm
+நாம்     செல்வோம் .
+nām     celvōm
 we.INCL go-FUT-1PL
 “We will go.”
 ```
@@ -763,9 +763,9 @@ Note: This distinction should be verified in the corpus because actual usage may
 Example:
 
 ```text
-குமார் பாஸ்ட்டாக ஓடினான் .
-kumār pāsṭṭāka ōṭiṉāṉ
-Kumar fast-ADV ran
+குமார்   பாஸ்ட்டாக ஓடினான் .
+kumār  pāsṭṭāka ōṭiṉāṉ
+Kumar  fast-ADV ran
 “Kumar ran fast.”
 ```
 
@@ -775,7 +775,7 @@ Annotation:
 பாஸ்ட்டாக    ADV    Foreign=Yes
 ```
 
-Note: Do not mark common integrated loanwords such as **கார்**, **பஸ்**, **டிவி**, and **மொபைல்** as foreign unless the corpus policy requires it.
+Note: Some loanwords such as **கார்** "Car", **பஸ்** "Bus", **டிவி** "TV", **சினிமா** "Cinema" and **மொபைல்** "Mobile" are now well integrated in Tamil usage. Thereore, it is upto the project to decide whether to mark them foreign or not. 
 
 ---
 
@@ -786,10 +786,10 @@ Note: Do not mark common integrated loanwords such as **கார்**, **பஸ
 Example:
 
 ```text
-தி.மு.க. ஆட்சியில் உள்ளது .
-ti.mu.ka. āṭciyil uḷḷatu
-DMK power-LOC is
-“DMK is in power.”
+தி.மு.க.   ஆட்சியில்   உள்ளது
+ti.mu.ka. āṭciyil   uḷḷatu
+DMK       power-LOC exist
+“DMK exists in power.”
 ```
 
 Annotation:
@@ -818,8 +818,6 @@ Annotation:
 அவ்ன்    PRON    Typo=Yes
 ```
 
-Note: If the error is corrected during preprocessing, do not use `Typo=Yes`.
-
 ---
 
 # 26. PunctType
@@ -842,7 +840,7 @@ Example:
 ```text
 அவன் வந்தானா ?
 avaṉ vantāṉā ?
-“Did he come?”
+Did he come ?
 ```
 
 Annotation:
