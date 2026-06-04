@@ -79,6 +79,12 @@ Participial nouns such as **வந்தவன்**, **வந்தவள்**, 
 
 #### [-um / -உம் clitic documentation](mwe-um-clitic.md)
 
+#### [other clitics documentation](mwe-clitics.md)
+
 ### Multiword tokenisation of N+V and V+V compounds
+
+#### [N+V and V+V documentation](mwe-nv-vv.md)
+
+### [Multiword tokenisation of N+ADP](mwe-adp.md)
 
 #### [N+V and V+V documentation](mwe-nv-vv.md)
