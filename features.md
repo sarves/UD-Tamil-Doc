@@ -864,6 +864,7 @@ Sandhi=t  த்
 Sandhi=p  ப் 
 ```
 
+
 Tamil morphological analysis and syntactic annotation are often affected by sandhi, as sandhi may introduce restrictions on how words are segmented and interpreted. In some cases, sandhi markers may also indicate genitive-like relations, as in கதிரைக் கால் compared with கதிரை கால்.
 
 Marking sandhi is also useful because, in contemporary writing, some writers do not consistently represent sandhi. Therefore, sandhi marking can provide valuable features for studying variation in Tamil texts, including changes across time, generations, genres and writing styles.
