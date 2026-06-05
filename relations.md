@@ -9,45 +9,44 @@ The following relations are documented because they occur in the MWTT treebank.
 
 ~~~sdparse
 acl
-acl:relcl
+  acl:relcl
 advcl
-advcl:cond
+  advcl:cond
 advmod
-advmod:emph
+  advmod:emph
 amod
 aux
-aux:neg
-aux:pass
+  aux:neg
+  aux:pass
 case
 cc
-compound:lvc
-compound:redup
+compound
+  compound:lvc
+  compound:redup
 conj
 det
 iobj
 mark
 nmod
-nmod:poss
+  nmod:poss
 nsubj
-nsubj:nc
-nsubj:pass
+  nsubj:nc
+  nsubj:pass
 nummod
 obj
 obl
-obl:agent
-obl:arg
-obl:cmpr
-obl:inst
-obl:lmod
-obl:pmod
-obl:tmod
+  obl:agent
+  obl:arg
+  obl:cmpr
+  obl:inst
+  obl:lmod
+  obl:pmod
+  obl:tmod
 punct
 root
 vocative
 xcomp
 ~~~
-
-Some labels in the MWTT data are language-specific subtypes, such as `nsubj:nc`, `aux:neg`, `obl:cmpr`, `obl:inst`, and `obl:pmod`.
 
 ## Core clause relations
 
