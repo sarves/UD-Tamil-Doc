@@ -5,7 +5,7 @@ Tamil is generally a head-final language, meaning that objects, modifiers, case-
 
 The following relations are documented because they occur in the MWTT treebank.
 
-```text
+~~~sdparse
 acl
 acl:relcl
 advcl
@@ -45,7 +45,7 @@ punct
 root
 vocative
 xcomp
-```
+~~~
 
 Some labels in the MWTT data are language-specific subtypes, such as `nsubj:nc`, `aux:neg`, `obl:cmpr`, `obl:inst`, and `obl:pmod`.
 
@@ -233,3 +233,209 @@ mark(like appear-he, like)
 ~~~
 
 Source example: `sent_id = 395`.
+
+## Nominal dependents
+
+### `amod`: adjectival modifier
+
+Marks an adjectival modifier of a nominal. This includes derived adjectives formed with the suffix -aana, provided these suffixes have not been tokenized separately.
+
+~~~sdparse
+அங்கு நிறைய வீடுகள் இருக்கின்றன . \n aṅku niṟaiya vīṭukaḷ irukkiṉṟaṉa . \n there many houses be-they
+amod(வீடுகள், நிறைய)
+amod(vīṭukaḷ, niṟaiya)
+amod(houses, many)
+~~~
+
+Source example: `sent_id = 2`.
+
+### `det`: determiner
+
+Tamil lacks a distinct class of determiners; instead, demonstratives function as determiners. `det` marks determiners, with a specific focus on demonstrative elements.
+
+~~~sdparse
+இந்தப் புத்தகத்தைக் கொடுங்கள் . \n intap puttakattaik koṭuṅkaḷ . \n this book-ACC give-you
+det(புத்தகத்தைக், இந்த)
+det(puttakattaik, inta)
+det(book-ACC, this)
+~~~
+
+Source example: `sent_id = 14`.
+
+### `nummod`: numeric modifier
+
+Marks a numeric modifier of a noun.
+
+~~~sdparse
+இரண்டு நாய்கள் வந்தன . \n iraṇṭu nāykaḷ vantana . \n two dogs came-they
+nummod(நாய்கள், இரண்டு)
+nummod(nāykaḷ, iraṇṭu)
+nummod(dogs, two)
+~~~
+
+Source example: `sent_id = 3`.
+
+### `nmod`: nominal modifier
+
+Marks a nominal modifier of another nominal. This should not be confused with the `compound` relation, which denotes compounding rather than syntactic modification."
+
+~~~sdparse
+சித்திரை மாதத்தோடு தமிழ் வருசம் ஆரம்பிக்கிறது . \n cittirai mātattōṭu tamiḻ varucam ārampikkiṟatu . \n April month-with Tamil year start-it
+nmod(மாதத்தோடு, சித்திரை)
+nmod(mātattōṭu, cittirai)
+nmod(month-with, April)
+~~~
+
+Source example: `sent_id = 29`.
+
+### `nmod:poss`: possessive nominal modifier
+
+Marks a possessive nominal/pronominal modifier. Possessive forms may also include `Case=Gen` and `Poss=Yes` in the morphological features.
+
+~~~sdparse
+என் பையன்கள் வந்தார்கள் . \n eṉ paiyaṉkaḷ vantārkaḷ . \n my sons came-they
+nmod:poss(பையன்கள், என்)
+nmod:poss(paiyaṉkaḷ, eṉ)
+nmod:poss(sons, my)
+~~~
+
+Source example: `sent_id = 1`.
+
+
+
+## Adverbial and oblique relations
+
+### `advmod`: adverbial modifier
+
+Marks a non-clausal adverbial modifier. Since Tamil exhibits relatively free word order, the `advmod` dependent does not necessarily have to immediately precede the verb. Therefore, annotators must verify the exact head relation carefully rather than relying solely on linear proximity.
+
+~~~sdparse
+அங்கு நிறைய வீடுகள் இருக்கின்றன . \n aṅku niṟaiya vīṭukaḷ irukkiṉṟaṉa . \n there many houses exist-they
+advmod(இருக்கின்றன, அங்கு)
+advmod(irukkiṉṟaṉa, aṅku)
+advmod(exist-they, there)
+~~~
+
+Source example: `sent_id = 2`.
+
+### `advmod:emph`: emphatic adverbial modifier
+
+Marks an emphatic particle or clitic modifying a predicate or modifier. Here the emphatic element தானே has to be segmented as a token according to the multiword/clitic guideline before processing it.
+
+~~~sdparse
+குமார் நேரத்தோடு வந்தால் தானே . \n kumār nērattōṭu vantāltāṉē . \n Kumar time-wtih come-if only-then
+advmod:emph(வந்தால், தானே)
+advmod:emph(vantāl, tāṉē)
+advmod:emph(come-if, only-then)
+~~~
+
+Source example: `sent_id = 95`.
+
+
+### `obl`: oblique nominal
+
+Marks a non-core nominal dependent of a predicate. Additionally, specific non-core nominals—such as agents in passive constructions and nominals marked with the instrumental case, locative case —are annotated with specific subtypes. Examples of these structures are provided later in the documentation.
+
+~~~sdparse
+குமார் ஊருக்குப் போனான் . \n kumār ūrukkup pōṉāṉ . \n Kumar village-TO went-he
+obl(போனான், ஊருக்குப்)
+obl(pōṉāṉ, ūrukkup)
+obl(went-he, village-TO)
+~~~
+
+Source example: `sent_id = 26`.
+
+### `obl:agent`: passive agent
+
+Marks the agent in a passive clause. In Tamil, agents in passive clauses are marked `inst` case markers. It also should be noted that the passive maker `padu` should be tokenised and marked with the `aux:pass` relation.
+
+~~~sdparse
+குமார் அப்பாவால் அடிக்கப் பட்டான் . \n kumār appāvāl aṭikkap paṭṭāṉ . \n Kumar father-by beat-INF was-he
+obl:agent(அடிக்கப், அப்பாவால்)
+obl:agent(aṭikkap, appāvāl)
+obl:agent(beat-INF, father-by)
+~~~
+
+Source example: `sent_id = 48`.
+
+### `obl:arg`: oblique argument
+
+Marks an oblique dependent that behaves as an argument of the predicate. In this case it is a question pronoun - `etu`.
+
+~~~sdparse
+உங்களுக்கு எது வேண்டும் ? \n uṅkaḷukku etu vēṇṭum ? \n you-DAT which want ?
+obl:arg(வேண்டும், எது)
+obl:arg(vēṇṭum, etu)
+obl:arg(want, which)
+~~~
+
+Source example: `sent_id = 150`.
+
+### `obl:cmpr`: comparative oblique
+
+This subtype used in the data for a comparative standard or comparison-related oblique. This is a language-specific subtype in the MWTT data.
+
+~~~sdparse
+அங்குக்கு இங்கு நல்லது . \n aṅkukku iṅku nallatu . \n there-DAT here good-it .
+
+obl:cmpr(நல்லது, அங்குக்கு)
+obl:cmpr(nallatu, aṅkukku)
+obl:cmpr(good, there-DAT)
+~~~
+
+Source example: `sent_id = 69`.
+
+
+
+### `obl:inst`: instrumental oblique
+
+Marks an instrument or means.
+
+~~~sdparse
+பையன் சாவியால் கதவைத் திறந்தான் . \n paiyaṉ cāviyāl katavait tiṟantāṉ . \n boy key-by door-ACC opened-he
+obl:inst(திறந்தான், சாவியால்)
+obl:inst(tiṟantāṉ, cāviyāl)
+obl:inst(opened-he, key-by)
+~~~
+
+Source example: `sent_id = 9`.
+
+### `obl:lmod`: locative oblique modifier
+
+Marks an oblique nominal specifying location.
+
+~~~sdparse
+அவன் ஒரு ஆபிசில் வேலை செய்கிறான் . \n avaṉ oru āpicil vēlai ceykiṟāṉ . \n he a office-LOC work do-he
+obl:lmod(செய்கிறான், ஆபிசில்)
+obl:lmod(ceykiṟāṉ, āpicil)
+obl:lmod(do-he, office-LOC)
+~~~
+
+Source example: `sent_id = 76`.
+
+### `obl:pmod`: place modifier
+
+Tamil-specific subtype used in the data for place/location-like modifiers.
+
+~~~sdparse
+குமார் இன்று மட்டும் இங்கே இருக்கிறான் . \n kumār iṉṟu maṭṭum iṅkē irukkiṟāṉ . \n Kumar today only here stay-he
+obl:pmod(இருக்கிறான், இங்கே)
+obl:pmod(irukkiṟāṉ, iṅkē)
+obl:pmod(stay-he, here)
+~~~
+
+Source example: `sent_id = 357`.
+
+
+### `obl:tmod`: temporal oblique modifier
+
+Marks an oblique nominal specifying time.
+
+~~~sdparse
+குமார் ஐந்து மணிக்கு வருவான் . \n kumār aintu maṇikku varuvāṉ . \n Kumar five hour-DAT come-he
+obl:tmod(வருவான், மணிக்கு)
+obl:tmod(varuvāṉ, maṇikku)
+obl:tmod(come-he, hour-DAT)
+~~~
+
+Source example: `sent_id = 34`.
