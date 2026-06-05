@@ -27,6 +27,8 @@ is tokenised as:
 அவன் வந்தான் .
 ```
 
+However, this tokenisation is used only for annotation purposes. The original sentence form, without tokenisation changes or corrections, must be preserved and included in the sentence text (# text). Further, if there is no space between a token and the following punctuation mark in the original sentence, the feature `SpaceAfter=No` must be added to the preceding token. This marks that there is no space between the token and the following punctuation in the original text.
+
 After this basic tokenisation, multiword tokens must be identified and split where necessary. This is a critical stage in Tamil UD annotation, because a single written form may contain more than one syntactic word. Such cases cannot be handled by simple whitespace- or punctuation-based tokenisation alone.
 
 Multiword tokenisation requires careful linguistic analysis. Annotators should decide whether a surface form should be split by considering its syntactic function, morphological structure, and the UD guidelines. Some common cases include forms involving clitics, auxiliaries, postpositions, and particles.
