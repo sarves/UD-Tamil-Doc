@@ -1,3 +1,5 @@
+## Head-final Tamil and head-initial dependency notation
+
 Tamil is generally a head-final language, meaning that objects, modifiers, case-marked nominals, and subordinate clauses typically precede their head. However, to maintain compatibility with UD annotation guidelines, the dependency notation follows a head-initial convention.
 
 
@@ -18,12 +20,10 @@ aux:neg
 aux:pass
 case
 cc
-compound
 compound:lvc
 compound:redup
 conj
 det
-fixed
 iobj
 mark
 nmod
@@ -439,3 +439,144 @@ obl:tmod(come-he, hour-DAT)
 ~~~
 
 Source example: `sent_id = 34`.
+
+## Function words and coordination
+
+### `aux`: auxiliary
+
+Marks an auxiliary dependent of a verbal predicate. In Tamil, auxiliaries are handled this way, although one could argue that under strict UD principles, the dependency direction should be reversed since the auxiliary verb carries the tense and PNG suffixes. 
+
+V+V forms must be checked carefully against the multiword expression guidelines.
+
+~~~sdparse
+குமார் தொழிலைக் கற்றுக் கொண்டான் . \n kumār toḻilaik kaṟṟuk koṇṭāṉ . \n Kumar work-ACC learn-VRB took-he
+aux(கற்றுக், கொண்டான்)
+aux(kaṟṟuk, koṇṭāṉ)
+aux(learn-VRB, took-he)
+~~~
+
+Source example: `sent_id = 45`.
+
+### `aux:neg`: negative auxiliary
+
+This specific subtype used in the data for negative auxiliaries such as forms of `māṭṭu / மாட்டு`. This can also be handled by using `aux` with `Polarity=Neg` in features.
+
+~~~sdparse
+நான் விட மாட்டேன் . \n nāṉ viṭa māṭṭēṉ . \n I let not-I
+aux:neg(விட, மாட்டேன்)
+aux:neg(viṭa, māṭṭēṉ)
+aux:neg(let, not-I)
+~~~
+
+Source example: `sent_id = 88`.
+
+### `aux:pass`: passive auxiliary
+
+Marks a passive auxiliary, commonly involving forms of படு.
+
+~~~sdparse
+குமார் அப்பாவால் அடிக்கப் பட்டான் . \n kumār appāvāl aṭikkap paṭṭāṉ . \n Kumar father-by beat-INF was-he .
+aux:pass(அடிக்கப், பட்டான்)
+aux:pass(aṭikkap, paṭṭāṉ)
+aux:pass(beat-INF, was-he)
+~~~
+
+Source example: `sent_id = 48`.
+
+### `case`: case marker / postposition
+
+Marks a case marker when it is tokenised or occurs as a separate token. If a case marker remains attached as a suffix within the noun, its values should be represented in the morphological features rather than being tokenised separately. 
+Postpositions must always be tokenised independently (refer to the tokenisation guidelines) and assigned the case relation; in this instance, it does not denote a morphological case. 
+
+~~~sdparse
+காலை முதல் மழை பெய்கிறது . \n kālai mutal maḻai peykiṟatu . \n morning since rain pouring-it .
+case(காலை, முதல்)
+case(kālai, mutal)
+case(morning, since)
+~~~
+
+Source example: `sent_id = 211`.
+
+### `cc`: coordinating conjunction
+
+Marks a coordinating conjunction or a coordinating clitic. A clitic such as -um (உம்) is usually attached directly to the word token; therefore, it must be tokenised as a separate unit before dependency relations are assigned.
+
+
+~~~sdparse
+சிறிய ஆனால் நல்ல பெண் . \n ciṟiya āṉāl nalla peṇ . \n small but good girl .
+cc(சிறிய, ஆனால்)
+cc(ciṟiya, āṉāl)
+cc(small, but)
+~~~
+
+Source example: `sent_id = 323`.
+
+
+### `conj`: conjunct
+
+Connects coordinated elements, where the first conjunct is normally treated as the structural head. According to the guidelines, adverbial markers are not tokenised separately; therefore, the suffix -māka will not be split from the host token. As seen in the example, -māka applies to the entire coordinate phrase rather than to the final conjunct (teruvukku) alone.
+
+~~~sdparse
+குமார் வாசலுக்கு உம் தெருவுக்கு உம்மாக நடந்தான் . \n kumār vācaluk kum teruvuk kumāka naṭantāṉ . \n Kumar gate-DAT and road-DAT and-ADV walked-he
+conj(வாசலுக்கு, தெருவுக்கு)
+conj(vācalukku, teruvukku)
+conj(gate-DAT, road-DAT)
+~~~
+
+In this instance, both instances of the clitic -um will be annotated with separate cc relations, as shown below.
+
+~~~sdparse
+குமார் வாசலுக்கு உம் தெருவுக்கு உம்மாக நடந்தான் . \n kumār vācalukk um teruvukk umāka naṭantāṉ . \n Kumar gate-DAT and road-DAT and-ADV walked-he
+cc(வாசலுக்கு, உம்) and cc(தெருவுக்கு, உம்மாக)
+cc(vācalukku, um) and cc(teruvukk, umāka)
+cc(gate-DAT, and) and cc(road-DAT, and-ADV)
+~~~
+
+
+Source example: `sent_id = 304`.
+
+### `vocative`: vocative
+
+Marks an addressed participant.
+
+~~~sdparse
+அம்மா அது நேர்ந்தது . \n ammā atu nērntatu . \n mother that happened-it
+vocative(நேர்ந்தது, அம்மா)
+vocative(nērntatu, ammā)
+vocative(happened-it, mother)
+~~~
+
+Source example: `sent_id = 397`.
+
+## Multiword-expression and special relations
+
+Multiword expressions in Tamil can exhibit various types of syntactic relations among their components. This section accounts for the compound structures found within the dataset, although other types may also occur.
+
+### `compound:lvc`: light verb construction
+
+
+Marks a light verb construction. In the MWTT data, the nominal or predicate element is treated as the head, while the light or support verb acts as the dependent. Although one could argue that treating the noun as the head is a purely semantically motivated decision—given that the light verb actually carries the tense, aspect, and PNG agreement suffixes—the current decision is to annotate based on the semantic head rather than the syntactic head.
+Further, we also aware that one can also think of proposing a complex lemma, like ōyvueṭukka (ōyvu+eṭukka).
+
+~~~sdparse
+குமார் ஓய்வு எடுக்க வேண்டும் . \n kumār ōyvu eṭukka vēṇṭum . \n Kumar rest-NOUN take-INF must
+compound:lvc(ஓய்வு, எடுக்க)
+compound:lvc(ōyvu, eṭukka)
+compound:lvc(rest-NOUN, take-INF)
+
+~~~
+
+Source example: `sent_id = 500`.
+
+
+### `compound:redup`: reduplicated compound
+
+Marks reduplication or repeated elements. Reduplication is a widely used in Dravidian languages.
+
+~~~sdparse
+இவ்வளவு நான் சாப்பிட முடியவே முடியாது . \n ivvaḷavu nāṉ cāppiṭa muṭiyavē muṭiyātu . \n this-much I eat-to can-EMPH cannot-it
+compound:redup(முடியாது, முடியவே)
+compound:redup(muṭiyātu, muṭiyavē)
+compound:redup(cannot-it, can-EMPH)
+
+~~~
