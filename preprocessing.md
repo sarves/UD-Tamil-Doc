@@ -29,6 +29,8 @@ Before UD annotation, all texts should be normalised and checked for ambiguous c
 * This is especially important in OCR text and old digitally converted texts.
 * All replacements should be documented.
 
+Note: Ambiguous character replacement should be done carefully. In some contexts, writers may intentionally use Tamil numerals in the text. For example, Tamil numerals may be used in Tamil calendars, traditional documents, or very old texts where Tamil number symbols are expected. In such cases, these characters should not be automatically replaced with visually similar Tamil letters. Annotators should first check the context and replace characters only when it is clear that they are wrongly encoded or unintentionally used.
+
 | Ambiguous character/Tamil numeral | Correct character | Example correction |
 |---|---|---|
 | ௨ | உ | ௨லகம் → உலகம் |
